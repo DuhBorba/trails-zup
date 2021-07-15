@@ -12,13 +12,9 @@ export function Card({ title, description = '', image, openModal }) {
       <div className="card-img">
         <img src={image} alt="Trilha" />
       </div>
-      <div>
-        <h2 className="title-card">{title}</h2>
-      </div>
-      <div>
-        <p className="description-card"> {lenghtDescription()} </p>
-      </div>
-      <div>
+      <h2 className="title-card">{title}</h2>
+      <p className="description-card"> {lenghtDescription()} </p>
+      <div className="button">
         <button onClick={openModal} className="btn">detalhes</button>
       </div>
     </div>

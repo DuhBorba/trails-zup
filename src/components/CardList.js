@@ -30,7 +30,7 @@ export function CardList() {
             image={card.image}
             key={`${card.name}_${card.id}`}
             openModal={() => {
-              setModalContent(card)
+              setModalContent(card);
               setModalVisible(true);
             }} />)
           }
