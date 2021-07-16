@@ -1,0 +1,40 @@
+.banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .title{
+    h1{
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      font-size: 96px;
+      line-height: 70px;
+      color: #fff;
+      span{
+        align-self: flex-end;
+        font-family: 'Acme', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 56px;
+      }
+    }
+        @media(min-width: 768px){
+          h1{
+            font-size: 128px;
+            line-height: 90px;
+            span{
+              font-size: 78px;
+            }
+          }
+        }
+  }
+  .img-banner{
+    img{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+#navbar{
+  padding: 13px 48px;
+  height: 50px;
+  ul{
+    display: flex;
+    float: right;
+    align-items: center;
+    li{
+      margin-left: 24px;
+      font-size: 18px;
+      line-height: 27px;
+      color: #fff;
+      @media(min-width: 768px){
+        font-size: 22px;
+      }
+      img{
+        max-height: 48px;
+        max-width: 48px;
+      }
+    }
+  }
+}

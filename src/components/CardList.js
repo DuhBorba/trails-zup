@@ -4,6 +4,9 @@ import { Card } from './Card';
 import { Modal } from './Modal';
 import { Fetch } from '../services/fetch';
 
+import '../styles/cards.scss';
+import '../styles/modal.scss';
+
 
 export function CardList() {
 
@@ -36,7 +39,7 @@ export function CardList() {
           }
         </div>
       </section>
-      {modalVisible && <Modal {...modalContent} closeModal={() => setModalVisible(false)} />}
+      {modalVisible && <Modal {...modalContent} closeModal={() => setModalVisible(false)} isVisible={modalVisible} />}
     </>
   )
 }

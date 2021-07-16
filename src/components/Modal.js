@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { Fetch } from '../services/fetch';
 import { useSubscription } from '../context/subscriptions';
 
-export function Modal({ id, name, description, closeModal = () => { } }) {
+
+export function Modal({ id, name, description, closeModal = () => { }, isVisible }) {
 
   const [modalData, setModalData] = useState([]);
   const { subscriptions, setSubscriptions, subscribed, setSubscribed } = useSubscription();
@@ -16,6 +17,19 @@ export function Modal({ id, name, description, closeModal = () => { } }) {
   useEffect(() => {
     fetchModalData();
   }, [])
+
+  useEffect(() => {
+    const handleKeyDown = ({ key }) => {
+      if (isVisible && key === "Escape" && closeModal) {
+        closeModal()
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [closeModal])
 
   const handleButton = () => {
     setSubscriptions(subscriptions + 1);

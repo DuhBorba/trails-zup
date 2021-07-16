@@ -5,3 +5,34 @@ body{
 body, input, button, textarea{
   font-family: Montserrat, sans-serif;
 }
+
+.container{
+  margin: 0 28px;
+}
+
+.btn{
+  display: flex;
+  justify-content: end;
+  margin: 0 0 0 auto;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration: none;
+  color: #0C3455;
+  background: #8DC63F;
+  border-radius: 20px;
+  padding: 12px 32px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: .3s;
+  &:hover,&:disabled{
+    background: transparent;
+    border: 2px solid #8DC63F;
+  }
+  &:disabled{
+    cursor: not-allowed;
+  }
+  @media (min-height: 1024px) {
+    padding: 16px 36px;
+  }
+}

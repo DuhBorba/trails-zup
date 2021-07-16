@@ -1,5 +1,7 @@
 import notebookImg from '../assets/images/notebook.svg';
 
+import '../styles/banner.scss';
+
 export function Banner() {
   return (
     <section className="container">
