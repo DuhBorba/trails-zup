@@ -7,7 +7,7 @@ export function Banner() {
     <section className="container">
       <div className="banner">
         <div className="title">
-          <h1>ZUP<br /><span>trails</span></h1>
+          <h1>ZUP<span>trails</span></h1>
         </div>
         <div className="img-banner">
           <img src={notebookImg} alt="Notebook" />
